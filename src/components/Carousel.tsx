@@ -9,7 +9,7 @@ type CarouselProps = {
 	children: ReactNode
 } & Partial<InternalCarouselProps>
 
-export const ProductCarousel: FC<CarouselProps> = ({ children, ...props }) => {
+export const Carousel: FC<CarouselProps> = ({ children, ...props }) => {
 	return (
 		<Suspense fallback={<div>{Array.isArray(children) ? children[0] : children}</div>}>
 			<NukaCarousel

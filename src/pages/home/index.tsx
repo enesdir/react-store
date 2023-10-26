@@ -1,12 +1,12 @@
 import Container from '@mui/material/Container'
 
-import { HomeCarousel } from '@/features/heroSection/components/HomeCarousel'
+import { HeroCarousel } from '@/features/heroSection/components/HeroCarousel/HeroCarousel'
 import { ProductsSection } from '@/features/products/components/ProductsSection'
 
 const Home = () => {
 	return (
 		<>
-			<HomeCarousel />
+			<HeroCarousel />
 			<Container sx={{ paddingY: 10 }}>
 				<ProductsSection />
 			</Container>

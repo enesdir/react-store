@@ -5,8 +5,8 @@ import EastIcon from '@mui/icons-material/East'
 import { Button } from '@mui/material'
 import Box from '@mui/material/Box'
 
+import { Carousel } from '@/components/Carousel'
 import { ProductCard } from '@/features/product/components/ProductCard'
-import { ProductCarousel } from './ProductCarousel/ProductCarousel'
 
 type ProductGridProps = {
 	products: ProductType[]
@@ -21,7 +21,7 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 	if (!products || !products.length) return <div>There are no products to display.</div>
 	return (
 		<Box sx={{ paddingTop: 2 }}>
-			<ProductCarousel>
+			<Carousel>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
 					<ProductCard
 						key={id}
@@ -46,7 +46,7 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 						</Button>
 					</Box>
 				)}
-			</ProductCarousel>
+			</Carousel>
 		</Box>
 	)
 }
