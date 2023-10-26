@@ -1,20 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Logs
 logs
 *.log
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 dist
 dist-ssr
 *.local
 
+# cache
+.swc/
+.eslintcache
+
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -28,6 +37,9 @@ dist-ssr
 
 # Turbo
 .turbo
+
+# vercel
+.vercel
 
 # env
 .env

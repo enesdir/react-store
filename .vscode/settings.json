@@ -1,0 +1,58 @@
+{
+	"javascript.validate.enable": false,
+	"typescript.validate.enable": true,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"typescript.suggest.completeFunctionCalls": true,
+	"eslint.lintTask.enable": true,
+	"typescript.surveys.enabled": false,
+	"npm.autoDetect": "on",
+	"git.inputValidationLength": 1000,
+	"git.inputValidationSubjectLength": 100,
+	"eslint.onIgnoredFiles": "off",
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
+	"workbench.editor.labelFormat": "short",
+	"prettier.requireConfig": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	// Configure glob patterns for excluding files and folders.
+	// For example, the files explorer decides which files and folders to show
+	// or hide based on this setting.
+	// Read more about glob patterns [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true
+	},
+	// Configure glob patterns for excluding files and folders in searches.
+	// Inherits all glob patterns from the `files.exclude` setting.
+	// Read more about glob patterns [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
+	"search.exclude": {
+		"**/node_modules": true
+	},
+	// Configure glob patterns of file paths to exclude from file watching.
+	// Patterns must match on absolute paths
+	// (i.e. prefix with ** or the full path to match properly).
+	// Changing this setting requires a restart.
+	// When you experience Code consuming lots of cpu time on startup,
+	// you can exclude large folders to reduce the initial load.
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/*/**": true
+	},
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	}
+}
