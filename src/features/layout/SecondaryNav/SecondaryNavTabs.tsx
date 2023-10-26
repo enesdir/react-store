@@ -28,17 +28,7 @@ export const SecondaryHeaderTabs = () => {
 
 	return (
 		<Box sx={{ width: '100%' }} onMouseLeave={handleMenuClose}>
-			<Tabs
-				value={value}
-				indicatorColor='primary'
-				textColor='primary'
-				centered
-				sx={{
-					'& .MuiTabs-root': {
-						width: 10,
-					},
-				}}
-			>
+			<Tabs value={value} indicatorColor='primary' textColor='primary' centered variant='fullWidth'>
 				{secondaryHeaderItems.map((section, index) => (
 					<Tab
 						key={index}
@@ -46,22 +36,15 @@ export const SecondaryHeaderTabs = () => {
 						data-key={index}
 						label={section.title}
 						sx={{
-							fontWeight: theme.typography.Body1,
-							fontSize: theme.typography.Body1,
+							fontWeight: theme.typography.Body1.fontWeight,
+							fontSize: theme.typography.Body1.fontSize,
 							textTransform: 'none',
-							flexWrap: 'nowrap',
 							minWidth: 0,
 							color: '#6A6D70',
 							'&:hover': {
 								color: '#32363A',
 							},
-
-							'& .MuiTabs-indicator': {
-								display: 'flex',
-
-								justifyContent: 'center',
-								backgroundColor: 'transparent',
-							},
+							padding: 0,
 						}}
 						aria-owns={open ? 'menu-list-grow' : undefined}
 						aria-haspopup='true'
