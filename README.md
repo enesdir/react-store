@@ -7,7 +7,7 @@ This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#sc
 
 [**Live Demo**][Live-url]
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/enesdir/vite-react-tailwind-starter) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/enesdir/vite-react-tailwind-starter) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/enesdir/react-store)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/enesdir/react-store) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/enesdir/react-store) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/enesdir/react-store)
 
 <p align="center">
   <a href="https://github.com/enesdir/react-store/blob/master/LICENSE.md">
