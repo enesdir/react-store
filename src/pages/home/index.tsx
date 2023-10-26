@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 
+import { HomeCarousel } from '@/features/heroSection/components/HomeCarousel'
 import { ProductsSection } from '@/features/products/components/ProductsSection'
-import { HomeCarousel } from '../../components/HomeCarousel'
 
 const Home = () => {
 	return (

@@ -1,7 +1,7 @@
 import type { ControlProps, InternalCarouselProps } from 'nuka-carousel'
 import type { ReactNode } from 'react'
 
-import './Carousel.css'
+import './HeroCarousel.css'
 
 import { FC, lazy, Suspense } from 'react'
 
@@ -11,7 +11,7 @@ type CarouselProps = {
 	children: ReactNode
 } & Partial<InternalCarouselProps>
 
-export const Carousel: FC<CarouselProps> = ({ children, ...props }) => {
+export const HeroCarousel: FC<CarouselProps> = ({ children, ...props }) => {
 	return (
 		<Suspense fallback={<div>{Array.isArray(children) ? children[0] : children}</div>}>
 			<NukaCarousel

@@ -16,5 +16,3 @@ export const routes: Array<PathRouteProps> = [
 		element: <TemplateTest />,
 	},
 ]
-
-export const privateRoutes: Array<PathRouteProps> = []

@@ -1,9 +1,6 @@
 import Box from '@mui/material/Box'
 
-import { Carousel } from './Carousel/Carousel'
-
-export const IMAGE_WIDHT = 1024
-export const IMAGE_HEIGHT = 768
+import { HeroCarousel } from './HeroCarousel/HeroCarousel'
 
 const images = [
 	{
@@ -24,14 +21,8 @@ const images = [
 	},
 ]
 export const HomeCarousel = () => (
-	<Box
-		sx={{ paddingTop: 2 }}
-		// flex='1 1 0'
-		// sx={{
-		// 	img: { m: '0 auto', width: IMAGE_WIDHT, objectFit: 'cover', aspectRatio: `${IMAGE_WIDHT} / ${IMAGE_HEIGHT}` },
-		// }}
-	>
-		<Carousel>
+	<Box sx={{ paddingTop: 2 }}>
+		<HeroCarousel>
 			{images.map((image, index) => (
 				<Box
 					key={index}
@@ -46,6 +37,6 @@ export const HomeCarousel = () => (
 					alt={image.label}
 				/>
 			))}
-		</Carousel>
+		</HeroCarousel>
 	</Box>
 )
