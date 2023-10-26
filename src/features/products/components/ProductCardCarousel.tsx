@@ -34,15 +34,17 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 					/>
 				))}
 				{itemsToShow < products.length && (
-					<Button
-						sx={{ width: 140, textTransform: 'initial' }}
-						onClick={loadMoreItems}
-						endIcon={<EastIcon />}
-						variant='contained'
-						disableElevation
-					>
-						Daha fazla
-					</Button>
+					<Box display='flex' justifyContent='center' alignItems='center'>
+						<Button
+							sx={{ width: 140, textTransform: 'initial' }}
+							onClick={loadMoreItems}
+							endIcon={<EastIcon />}
+							variant='contained'
+							disableElevation
+						>
+							Daha fazla
+						</Button>
+					</Box>
 				)}
 			</ProductCarousel>
 		</Box>

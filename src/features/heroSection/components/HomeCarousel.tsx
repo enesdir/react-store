@@ -27,11 +27,12 @@ export const HomeCarousel = () => (
 				<Box
 					key={index}
 					component='img'
+					height='450px'
+					width='100%'
+					display='block'
 					sx={{
-						display: 'block',
-
+						flexShrink: 0,
 						overflow: 'hidden',
-						width: '100%',
 					}}
 					src={image.imgPath}
 					alt={image.label}
