@@ -10,7 +10,6 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
 
 import { mobileNavItems } from '@/app/config/mobileNavItems'
 import { ProductSearch } from '@/features/productSearch/components/ProductSearch'
@@ -73,9 +72,7 @@ export function Navbar(props: NavbarProps) {
 						disableGutters
 					>
 						<Box width={{ xs: '100%', sm: 'unset' }} justifyContent='space-between' display='flex' alignItems='center'>
-							<Typography variant='h6' component='div'>
-								<Logo />
-							</Typography>
+							<Logo />
 							<IconButton
 								color='inherit'
 								aria-label='open drawer'
