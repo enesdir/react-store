@@ -26,7 +26,7 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": [".eslintrc.cjs", "next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+	"include": ["**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
 	"exclude": ["node_modules"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

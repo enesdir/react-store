@@ -8,17 +8,27 @@ import { ProductCard } from '@/features/product/components/ProductCard'
 
 type ProductGridProps = {
 	products: ProductType[]
+	// isShowLiked: boolean
 }
 
 export const ProductCardGrid = ({ products }: ProductGridProps) => {
 	const [itemsToShow, setItemsToShow] = useState<number>(4)
-
 	const loadMoreItems = useCallback(() => {
 		setItemsToShow(itemsToShow + 4)
 	}, [itemsToShow])
-	if (!products || !products.length) return <div>There are no products to display.</div>
+	if (!products || !products.length)
+		return (
+			<Box
+				justifyItems='center'
+				gap={2}
+				display={{ xs: 'none', md: 'inline-grid' }}
+				sx={{ paddingTop: 2, paddingBottom: 30 }}
+			>
+				There are no products to display.
+			</Box>
+		)
 	return (
-		<Box display='inline-grid' justifyItems='center' gap={2}>
+		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'inline-grid' }}>
 			<Grid container spacing='1rem' direction='row' alignItems='stretch'>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
 					<Grid key={id} item xs={12} md={3}>

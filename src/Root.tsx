@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 import { setupStore } from './app/store'
 import { AppThemeProvider } from './themes/AppThemeProvider'
 
+import './app/global.css'
+
 const store = setupStore()
 const container = document.getElementById('root') as HTMLElement
 const root = createRoot(container)

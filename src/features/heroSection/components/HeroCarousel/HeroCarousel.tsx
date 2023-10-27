@@ -1,41 +1,31 @@
-import type { ControlProps } from 'nuka-carousel'
-
+import { styled } from '@mui/material'
 import Box from '@mui/material/Box'
+import Carousel from 'react-multi-carousel'
 
-import './HeroCarousel.css'
-
+import { carouselResponsive } from '@/app/config/carouselResponsive'
 import { heroImages } from '@/app/config/heroImages'
-import { Carousel } from '@/components/Carousel'
 
-export const HeroCarousel = () => (
-	<Box sx={{ paddingTop: 2 }}>
-		<Carousel
-			renderBottomCenterControls={(props: ControlProps) => (
-				<ul style={{ display: 'flex', gap: 10, listStyle: 'none', padding: 0 }}>
-					{props.pagingDotsIndices.map((i) => (
-						<li key={i}>
-							<button
-								type='button'
-								onClick={() => props.goToSlide(i)}
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-									width: 10,
-									height: 10,
-									color: props.currentSlide === i ? 'white' : 'black',
-									background: props.currentSlide === i ? 'transparent' : 'white',
-									borderRadius: '50%',
-									border: '1px solid #fff',
-								}}
-								aria-label={`Go to slide ${i + 1}`}
-								aria-selected={props.currentSlide === i}
-							></button>
-						</li>
-					))}
-				</ul>
-			)}
-		>
+const StyledCarousel = styled(Carousel)(() => ({
+	'.react-multi-carousel-dot-list': {
+		backgroundColor: 'rgba(0, 0, 0, 0.5)',
+		height: '3em',
+		width: '100%',
+		justifyContent: 'right',
+		alignItems: 'center',
+		paddingRight: '2em',
+	},
+	'.react-multi-carousel-dot button': {
+		backgroundColor: '#fff',
+		border: '1px solid #fff',
+	},
+	'.react-multi-carousel-dot--active button': {
+		backgroundColor: 'transparent',
+	},
+}))
+
+export function HeroCarousel() {
+	return (
+		<StyledCarousel arrows={false} autoPlay showDots swipeable responsive={carouselResponsive}>
 			{heroImages.map((image, index) => (
 				<Box
 					key={index}
@@ -43,14 +33,11 @@ export const HeroCarousel = () => (
 					height='450px'
 					width='100%'
 					display='block'
-					sx={{
-						flexShrink: 0,
-						overflow: 'hidden',
-					}}
+					margin='auto'
 					src={image.imgPath}
 					alt={image.label}
 				/>
 			))}
-		</Carousel>
-	</Box>
-)
+		</StyledCarousel>
+	)
+}

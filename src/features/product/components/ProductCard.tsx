@@ -49,7 +49,7 @@ const TruncatedTypography = styled(Typography)(() => ({
 }))
 
 export const ProductCard = ({ id, name, price, imageUrl, description, shippingMethod }: ProductType) => {
-	const MAX_DESCRIPTION_LENGTH = 100
+	const MAX_DESCRIPTION_LENGTH = 65
 
 	const truncatedText =
 		description.length > MAX_DESCRIPTION_LENGTH ? description.slice(0, MAX_DESCRIPTION_LENGTH) + '...' : description
