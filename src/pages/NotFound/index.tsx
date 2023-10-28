@@ -1,4 +1,4 @@
-const Page404 = () => {
+const NotFound = () => {
 	return (
 		<div className='grid md:flex md:min-h-[60vh] md:items-center gap-4'>
 			<div className='text-center'>
@@ -17,4 +17,4 @@ const Page404 = () => {
 	)
 }
 
-export default Page404
+export default NotFound
