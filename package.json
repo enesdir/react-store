@@ -61,7 +61,6 @@
 		"prettier-plugin-pkg": "^0.18.0",
 		"prettier-plugin-sh": "^0.13.1",
 		"typescript": "5.2.2",
-		"vite": "^4.5.0",
-		"vite-tsconfig-paths": "^4.2.1"
+		"vite": "^4.5.0"
 	}
 }
