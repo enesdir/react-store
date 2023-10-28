@@ -1,13 +1,14 @@
 import type { ProductType } from '@/features/product/types/ProductType'
 
-import { useCallback, useState } from 'react'
-import EastIcon from '@mui/icons-material/East'
-import { Button, styled } from '@mui/material'
+import { useState } from 'react'
 import Box from '@mui/material/Box'
+import { styled } from '@mui/material/styles'
 import Carousel from 'react-multi-carousel'
 
 import { carouselResponsive } from '@/app/config/carouselResponsive'
 import { ProductCard } from '@/features/product/components/ProductCard'
+import { LoadMoreButton } from '@/features/products/components/LoadMoreButton'
+import { NoProductsMessage } from '@/features/products/components/NoProductMessage'
 
 type ProductGridProps = {
 	products: ProductType[]
@@ -33,18 +34,20 @@ const StyledCarousel = styled(Carousel)(({ theme }) => ({
 export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 	const [itemsToShow, setItemsToShow] = useState<number>(4)
 
-	const loadMoreItems = useCallback(() => {
-		setItemsToShow(itemsToShow + 4)
-	}, [itemsToShow])
-	if (!products || !products.length)
-		return (
-			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }}>
-				There are no products to display.
-			</Box>
-		)
+	const loadMoreItems = () => {
+		setItemsToShow((prevItems) => prevItems + 4)
+	}
+	if (!products || !products.length) return <NoProductsMessage />
 	return (
 		<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }} position='relative'>
-			<StyledCarousel arrows={false} autoPlay showDots swipeable renderDotsOutside responsive={carouselResponsive}>
+			<StyledCarousel
+				arrows={false}
+				autoPlay={true}
+				showDots={true}
+				swipeable
+				renderDotsOutside
+				responsive={carouselResponsive}
+			>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
 					<ProductCard
 						key={id}
@@ -56,19 +59,7 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 						shippingMethod={shippingMethod}
 					/>
 				))}
-				{itemsToShow < products.length && (
-					<Box display='flex' justifyContent='center' alignItems='center'>
-						<Button
-							sx={{ width: 140, textTransform: 'initial' }}
-							onClick={loadMoreItems}
-							endIcon={<EastIcon />}
-							variant='contained'
-							disableElevation
-						>
-							Daha fazla
-						</Button>
-					</Box>
-				)}
+				{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
 			</StyledCarousel>
 		</Box>
 	)

@@ -1,18 +1,20 @@
-import type { PathRouteProps } from 'react-router-dom'
+import asyncComponentLoader from '@/utils/loader'
+import { Pages, Routes } from './types'
 
-import React from 'react'
-
-import TemplateTest from '@/pages/templatetest/'
-
-const Home = React.lazy(() => import('@/pages/home'))
-
-export const routes: Array<PathRouteProps> = [
-	{
+export const routes: Routes = {
+	[Pages.Home]: {
+		component: asyncComponentLoader(() => import('@/pages/Home')),
 		path: '/',
-		element: <Home />,
+		title: 'Home',
 	},
-	{
+	[Pages.TemplateTest]: {
+		component: asyncComponentLoader(() => import('@/pages/TemplateTest')),
 		path: '/templatetest',
-		element: <TemplateTest />,
+		title: 'Template Test',
 	},
-]
+
+	[Pages.NotFound]: {
+		component: asyncComponentLoader(() => import('@/pages/NotFound')),
+		path: '*',
+	},
+}

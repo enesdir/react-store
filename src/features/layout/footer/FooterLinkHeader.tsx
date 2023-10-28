@@ -6,7 +6,7 @@ export interface FooterHeaderProps {
 
 export function FooterLinkHeader({ headerText }: FooterHeaderProps) {
 	return (
-		<Typography variant='CTA1' sx={{ mb: 0.5 }} fontSize={{ base: 'lg', md: 'xl' }} color={'Sky.White'}>
+		<Typography variant='CTA1' sx={{ mb: 0.5 }} fontSize={{ base: 'lg', md: 'xl' }} color='common.white'>
 			{headerText}
 		</Typography>
 	)

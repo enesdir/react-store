@@ -1,10 +1,11 @@
 import type { ProductType } from '@/features/product/types/ProductType'
 
-import { useCallback, useState } from 'react'
-import EastIcon from '@mui/icons-material/East'
-import { Box, Button, Grid } from '@mui/material'
+import { useState } from 'react'
+import { Box, Grid } from '@mui/material'
 
 import { ProductCard } from '@/features/product/components/ProductCard'
+import { LoadMoreButton } from './LoadMoreButton'
+import { NoProductsMessage } from './NoProductMessage'
 
 type ProductGridProps = {
 	products: ProductType[]
@@ -13,20 +14,10 @@ type ProductGridProps = {
 
 export const ProductCardGrid = ({ products }: ProductGridProps) => {
 	const [itemsToShow, setItemsToShow] = useState<number>(4)
-	const loadMoreItems = useCallback(() => {
-		setItemsToShow(itemsToShow + 4)
-	}, [itemsToShow])
-	if (!products || !products.length)
-		return (
-			<Box
-				justifyItems='center'
-				gap={2}
-				display={{ xs: 'none', md: 'inline-grid' }}
-				sx={{ paddingTop: 2, paddingBottom: 30 }}
-			>
-				There are no products to display.
-			</Box>
-		)
+	const loadMoreItems = () => {
+		setItemsToShow((prevItems) => prevItems + 4)
+	}
+	if (!products || !products.length) return <NoProductsMessage />
 	return (
 		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'inline-grid' }}>
 			<Grid container spacing='1rem' direction='row' alignItems='stretch'>
@@ -43,17 +34,7 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 					</Grid>
 				))}
 			</Grid>
-			{itemsToShow < products.length && (
-				<Button
-					sx={{ width: 140, textTransform: 'initial' }}
-					onClick={loadMoreItems}
-					endIcon={<EastIcon />}
-					variant='contained'
-					disableElevation
-				>
-					Daha fazla
-				</Button>
-			)}
+			{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
 		</Box>
 	)
 }

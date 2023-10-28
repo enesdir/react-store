@@ -10,7 +10,7 @@ export function FooterLink({ text, to }: FooterLinkType) {
 			fontSize={{ base: 'sm', md: 'md' }}
 			display={{ xs: 'none', md: 'block' }}
 			variant='CTA2'
-			color={'Sky.White'}
+			color='common.white'
 		>
 			{text}
 		</Link>

@@ -18,13 +18,13 @@ export const FooterBottom = () => {
 				href='mailto:contact@nttdata.com'
 				aria-label='Our E-Mail Address'
 				variant='CTA2'
-				color='Sky.White'
+				color='common.white'
 				sx={{ textDecoration: 'none' }}
 			>
 				contact@nttdata.com
 			</Link>
 
-			<Typography variant='CTA2' fontWeight={400} color='Sky.White'>
+			<Typography variant='CTA2' fontWeight={400} color='common.white'>
 				+3 9876 765 444
 			</Typography>
 			<FooterSocial />

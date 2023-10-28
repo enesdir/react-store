@@ -15,7 +15,7 @@ export const FooterSocial = () => {
 				title='GitHub'
 				size='small'
 			>
-				<Instagram fontSize='small' sx={{ color: 'Sky.White' }} />
+				<Instagram fontSize='small' sx={{ color: 'common.white' }} />
 			</IconButton>
 			<IconButton
 				target='_blank'
@@ -25,7 +25,7 @@ export const FooterSocial = () => {
 				title='Twitter'
 				size='small'
 			>
-				<Facebook fontSize='small' sx={{ color: 'Sky.White' }} />
+				<Facebook fontSize='small' sx={{ color: 'common.white' }} />
 			</IconButton>
 			<IconButton
 				target='_blank'
@@ -35,7 +35,7 @@ export const FooterSocial = () => {
 				title='LinkedIn'
 				size='small'
 			>
-				<LinkedInIcon fontSize='small' sx={{ color: 'Sky.White' }} />
+				<LinkedInIcon fontSize='small' sx={{ color: 'common.white' }} />
 			</IconButton>
 		</Stack>
 	)

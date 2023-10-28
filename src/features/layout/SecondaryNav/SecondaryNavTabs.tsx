@@ -1,12 +1,11 @@
 // thanks: https://stackoverflow.com/questions/54745744/material-uireact-hovering-on-tabs-will-not-open-and-close-properly
 import React, { useState } from 'react'
-import { Box, Popper, Tab, Tabs, useTheme } from '@mui/material/'
+import { Box, Popper, Tab, Tabs } from '@mui/material/'
 
 import { secondaryHeaderItems } from '@/app/config/secondaryHeaderItems'
 import { SecondaryNavContainer } from './SecondaryNavContainer'
 
 export const SecondaryHeaderTabs = () => {
-	const theme = useTheme()
 	const [value, setValue] = useState(0)
 	const [open, setOpen] = useState(false)
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -36,8 +35,6 @@ export const SecondaryHeaderTabs = () => {
 						data-key={index}
 						label={section.title}
 						sx={{
-							fontWeight: theme.typography.Body1.fontWeight,
-							fontSize: theme.typography.Body1.fontSize,
 							textTransform: 'none',
 							minWidth: 0,
 							color: '#6A6D70',
