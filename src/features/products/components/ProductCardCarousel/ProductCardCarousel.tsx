@@ -2,34 +2,19 @@ import type { ProductType } from '@/features/product/types/ProductType'
 
 import { useState } from 'react'
 import Box from '@mui/material/Box'
-import { styled } from '@mui/material/styles'
 import Carousel from 'react-multi-carousel'
 
 import { carouselResponsive } from '@/app/config/carouselResponsive'
 import { ProductCard } from '@/features/product/components/ProductCard'
 import { LoadMoreButton } from '@/features/products/components/LoadMoreButton'
+import { CustomDot } from './CustomDot'
+
+import './ProductCardCarousel.css'
 
 type ProductGridProps = {
 	products: ProductType[]
 }
 
-const StyledCarousel = styled(Carousel)(({ theme }) => ({
-	'.product-card-carousel-dot-list': {
-		width: '100%',
-		justifyContent: 'center',
-		alignItems: 'center',
-		height: 100,
-		backgroundColor: 'red',
-	},
-	'.react-multi-carousel-dot button': {
-		border: 'none',
-		backgroundColor: 'grey',
-	},
-	'.react-multi-carousel-dot--active button': {
-		borderColor: theme.palette.primary.main,
-		backgroundColor: theme.palette.primary.main,
-	},
-}))
 export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 	const [itemsToShow, setItemsToShow] = useState<number>(4)
 
@@ -44,12 +29,14 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 		)
 	return (
 		<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }} position='relative'>
-			<StyledCarousel
+			<Carousel
 				arrows={false}
 				autoPlay={true}
 				showDots={true}
 				swipeable
 				renderDotsOutside
+				dotListClass='custom-dot-list'
+				customDot={<CustomDot />}
 				responsive={carouselResponsive}
 			>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
@@ -64,7 +51,7 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 					/>
 				))}
 				{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
-			</StyledCarousel>
+			</Carousel>
 		</Box>
 	)
 }
