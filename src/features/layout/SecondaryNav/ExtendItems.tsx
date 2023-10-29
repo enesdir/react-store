@@ -5,12 +5,11 @@ import Button from '@mui/material/Button'
 import Link from '@mui/material/Link'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
-import { useTheme } from '@mui/material/styles'
 
 import { secondaryHeaderItems } from '@/app/config/secondaryHeaderItems'
+import { SpacedFlexBox } from '@/components/styled'
 
 export function ExtendItems() {
-	const theme = useTheme()
 	const [anchorEl, setAnchorEl] = useState(null)
 	const open = Boolean(anchorEl)
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,9 +21,21 @@ export function ExtendItems() {
 	}
 
 	return (
-		<>
+		<SpacedFlexBox display={{ sm: 'flex', md: 'none' }} sx={{ paddingBottom: 1 }}>
 			{secondaryHeaderItems.slice(0, 6).map((section, index) => (
-				<Link color='inherit' noWrap key={index} variant='body2' href={section.url} sx={{ flexShrink: 0 }}>
+				<Link
+					color='#6A6D70'
+					noWrap
+					key={index}
+					href={section.url}
+					sx={{
+						fontWeight: 500,
+						fontSize: '14px',
+						'&:hover': {
+							color: '#32363A',
+						},
+					}}
+				>
 					{section.title}
 				</Link>
 			))}
@@ -35,7 +46,18 @@ export function ExtendItems() {
 				aria-expanded={open ? 'true' : undefined}
 				onClick={handleClick}
 				variant='text'
-				sx={{ color: 'grey', textTransform: 'initial' }}
+				sx={{
+					fontWeight: 500,
+					fontSize: '14px',
+					color: '#6A6D70',
+					textTransform: 'initial',
+					padding: 0,
+					margin: 0,
+					'&:hover': {
+						color: '#32363A',
+						backgroundColor: 'transparent',
+					},
+				}}
 				endIcon={open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
 			>
 				More
@@ -56,8 +78,8 @@ export function ExtendItems() {
 				}}
 				sx={{
 					'& .MuiPaper-root': {
-						color: theme.palette.grey[600],
-						backgroundColor: theme.palette.grey[50],
+						color: '#6A6D70',
+						backgroundColor: '#F4F5F6',
 					},
 				}}
 			>
@@ -69,6 +91,6 @@ export function ExtendItems() {
 					</MenuItem>
 				))}
 			</Menu>
-		</>
+		</SpacedFlexBox>
 	)
 }

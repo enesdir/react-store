@@ -8,7 +8,7 @@ export const FooterBottom = () => {
 	return (
 		<Box
 			sx={{
-				my: 4,
+				py: 2,
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'space-between',
@@ -17,14 +17,13 @@ export const FooterBottom = () => {
 			<Link
 				href='mailto:contact@nttdata.com'
 				aria-label='Our E-Mail Address'
-				variant='CTA2'
+				fontSize={{ xs: '12px', sm: '20px' }}
 				color='common.white'
 				sx={{ textDecoration: 'none' }}
 			>
 				contact@nttdata.com
 			</Link>
-
-			<Typography variant='CTA2' fontWeight={400} color='common.white'>
+			<Typography fontWeight={400} color='common.white' fontSize={{ xs: '12px', sm: '20px' }}>
 				+3 9876 765 444
 			</Typography>
 			<FooterSocial />

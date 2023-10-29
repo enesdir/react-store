@@ -5,7 +5,6 @@ import { Box, Grid } from '@mui/material'
 
 import { ProductCard } from '@/features/product/components/ProductCard'
 import { LoadMoreButton } from './LoadMoreButton'
-import { NoProductsMessage } from './NoProductMessage'
 
 type ProductGridProps = {
 	products: ProductType[]
@@ -17,7 +16,12 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 	const loadMoreItems = () => {
 		setItemsToShow((prevItems) => prevItems + 4)
 	}
-	if (!products || !products.length) return <NoProductsMessage />
+	if (!products || !products.length)
+		return (
+			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'none', md: 'block' }}>
+				There are no products to display.
+			</Box>
+		)
 	return (
 		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'inline-grid' }}>
 			<Grid container spacing='1rem' direction='row' alignItems='stretch'>

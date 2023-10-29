@@ -28,7 +28,7 @@ export function EmailSubscribe() {
 				sx={{
 					display: 'flex',
 					flexDirection: 'row',
-					width: { xs: '100%', sm: 'auto' },
+					width: '100%',
 					paddingY: 5,
 				}}
 			>
@@ -41,30 +41,33 @@ export function EmailSubscribe() {
 					onChange={(event) => setForm({ email: event.target.value, status: 'initial' })}
 					inputProps={{ required: true }}
 					sx={{
-						minWidth: 220,
 						borderRadius: 0,
-						border: '1px solid',
+						width: '100%',
+						border: 'none',
 						bgcolor: '#fff',
 						color: 'grey.800',
 						borderColor: 'grey.200',
 						typography: 'body2',
 					}}
+					endAdornment={
+						<Button
+							variant='contained'
+							disabled={form.status === 'loading'}
+							type='submit'
+							sx={{
+								backgroundColor: '#00254F',
+								color: '#FFFFFF',
+								minWidth: 101,
+								lineClamp: 'none',
+								borderRadius: 0,
+								textTransform: 'initial',
+								fontSize: 'theme.typography.CTA3',
+							}}
+						>
+							Sign Up
+						</Button>
+					}
 				/>
-				<Button
-					variant='contained'
-					disabled={form.status === 'loading'}
-					type='submit'
-					sx={{
-						backgroundColor: '#00254F',
-						color: '#FFFFFF',
-						width: 101,
-						borderRadius: 0,
-						textTransform: 'initial',
-						fontSize: 'theme.typography.CTA3',
-					}}
-				>
-					Sign Up
-				</Button>
 			</Box>
 			{form.status === 'failure' && (
 				<FormHelperText sx={{ color: 'warning.800' }}>

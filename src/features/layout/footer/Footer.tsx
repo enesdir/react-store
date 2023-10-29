@@ -9,7 +9,7 @@ import { EmailSubscribe } from './EmailSubscribe'
 import { FooterBottom } from './FooterBottom'
 import { FooterLinkContainer } from './FooterLinkContainer'
 
-export default function AppFooter() {
+export function Footer() {
 	return (
 		<Typography component='footer' sx={{ display: 'flex', bgcolor: 'primary.main' }} paddingTop={4}>
 			<Box sx={{ display: 'block', width: '100%' }}>
@@ -18,11 +18,11 @@ export default function AppFooter() {
 						direction='row'
 						justifyContent={{ xs: 'flex-start', md: 'space-between' }}
 						alignItems='flex-start'
-						spacing={4}
+						spacing={20}
 					>
-						<Box sx={{ width: { md: '35%', xs: '80%' } }}>
+						<Box sx={{ width: { xs: '80%', sm: '60%' } }}>
 							<Logo isBottom />
-							<Typography variant='subtitle1' color={'white'} sx={{ display: { xs: 'none', md: 'block' } }}>
+							<Typography variant='subtitle1' color='common.white' sx={{ display: { xs: 'none', sm: 'block' } }}>
 								Lorem ipsum dolor sit amet consectetur. Auctor tempor pretium aliquam neque.
 							</Typography>
 							<EmailSubscribe />

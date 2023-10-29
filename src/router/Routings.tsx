@@ -8,21 +8,16 @@
  * - https://reactrouter.com/docs/en/v6/upgrading/v5#note-on-link-to-values
  */
 
-import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { routes } from './routes'
 
-const Routings = () => {
+export const Routings = () => {
 	return (
-		<Suspense>
-			<Routes>
-				{Object.values(routes).map(({ path, component: Component }) => {
-					return <Route key={path} path={path} element={<Component />} />
-				})}
-			</Routes>
-		</Suspense>
+		<Routes>
+			{Object.values(routes).map(({ path, component: Component }) => {
+				return <Route key={path} path={path} element={<Component />} />
+			})}
+		</Routes>
 	)
 }
-
-export default Routings

@@ -1,13 +1,14 @@
 // thanks: https://stackoverflow.com/questions/54745744/material-uireact-hovering-on-tabs-will-not-open-and-close-properly
 import React, { useState } from 'react'
-import { Box, Popper, Tab, Tabs } from '@mui/material/'
+import { ButtonBase, Popper } from '@mui/material/'
 
 import { secondaryHeaderItems } from '@/app/config/secondaryHeaderItems'
+import { SpacedFlexBox } from '@/components/styled'
 import { SecondaryNavContainer } from './SecondaryNavContainer'
 
 export const SecondaryHeaderTabs = () => {
-	const [value, setValue] = useState(0)
-	const [open, setOpen] = useState(false)
+	const [value, setValue] = useState<number>(0)
+	const [open, setOpen] = useState<boolean>(false)
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 	//TODO: added functionality
 	// const handleMenuClick = (index: number) => {
@@ -26,31 +27,39 @@ export const SecondaryHeaderTabs = () => {
 	}
 
 	return (
-		<Box sx={{ width: '100%' }} onMouseLeave={handleMenuClose}>
-			<Tabs value={value} indicatorColor='primary' textColor='primary' centered variant='fullWidth'>
-				{secondaryHeaderItems.map((section, index) => (
-					<Tab
-						key={index}
-						onMouseEnter={(event) => handleMenuOpen(index, event)}
-						data-key={index}
-						label={section.title}
-						sx={{
-							textTransform: 'none',
-							minWidth: 0,
-							color: '#6A6D70',
-							'&:hover': {
-								color: '#32363A',
-							},
-							padding: 0,
-						}}
-						aria-owns={open ? 'menu-list-grow' : undefined}
-						aria-haspopup='true'
-					/>
-				))}
-			</Tabs>
+		<SpacedFlexBox onMouseLeave={handleMenuClose} display={{ sm: 'none', md: 'flex' }}>
+			{secondaryHeaderItems.map((section, index) => (
+				<ButtonBase
+					key={index}
+					onMouseEnter={(event) => handleMenuOpen(index, event)}
+					data-key={index}
+					sx={{
+						textTransform: 'none',
+						minWidth: 0,
+						color: open && value === index ? '#6A6D70' : '#32363A',
+						borderBottom: 2,
+						borderColor: open && value === index ? 'primary.main' : 'transparent',
+						fontWeight: 500,
+						fontSize: '14px',
+						'&:hover': {
+							color: '#32363A',
+							borderColor: 'primary.main',
+						},
+						'&:focus': { color: '#32363A' },
+						'&:active': { color: '#32363A' },
+
+						paddingBottom: 1,
+					}}
+					aria-owns={open ? 'menu-list-grow' : undefined}
+					aria-haspopup='true'
+				>
+					{section.title}
+				</ButtonBase>
+			))}
+
 			<Popper open={open} anchorEl={anchorEl} id='menu-list-grow' placement='bottom-start'>
 				<SecondaryNavContainer onClick={handleMenuClose} itemsValue={value} />
 			</Popper>
-		</Box>
+		</SpacedFlexBox>
 	)
 }

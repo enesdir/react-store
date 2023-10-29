@@ -8,7 +8,6 @@ import Carousel from 'react-multi-carousel'
 import { carouselResponsive } from '@/app/config/carouselResponsive'
 import { ProductCard } from '@/features/product/components/ProductCard'
 import { LoadMoreButton } from '@/features/products/components/LoadMoreButton'
-import { NoProductsMessage } from '@/features/products/components/NoProductMessage'
 
 type ProductGridProps = {
 	products: ProductType[]
@@ -37,7 +36,12 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 	const loadMoreItems = () => {
 		setItemsToShow((prevItems) => prevItems + 4)
 	}
-	if (!products || !products.length) return <NoProductsMessage />
+	if (!products || !products.length)
+		return (
+			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }}>
+				There are no products to display.
+			</Box>
+		)
 	return (
 		<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }} position='relative'>
 			<StyledCarousel
