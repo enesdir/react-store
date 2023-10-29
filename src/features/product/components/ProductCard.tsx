@@ -12,6 +12,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 		borderRadius: '0.25rem',
 		padding: '0.625rem',
 		display: 'flex',
+		minHeight: '370px',
 		flexDirection: 'column',
 		position: 'relative',
 		gap: '0.25rem',

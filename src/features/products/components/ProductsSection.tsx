@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 import { useAppDispatch, useAppSelector } from '@/app/store'
 import { fetchProducts } from '../productsSlice'
+import { CardSkeleton } from './CardSkeleton'
 import { ProductList } from './ProductList'
 
 export function ProductsSection() {
@@ -13,7 +14,7 @@ export function ProductsSection() {
 	}, [dispatch])
 
 	if (isLoading) {
-		return <div>Loading...</div>
+		return <CardSkeleton />
 	}
 
 	if (error) {

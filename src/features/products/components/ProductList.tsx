@@ -15,8 +15,8 @@ export function ProductList() {
 	const filteredItem = data.filter((product) => likedProducts.includes(product.id))
 
 	return (
-		<Box minHeight={480}>
-			<Box display='flex' justifyContent='space-between' alignContent='center' paddingY={2}>
+		<>
+			<Box display='flex' justifyContent='space-between' alignContent='center' paddingBottom={2}>
 				<Typography alignItems='center' fontSize={{ xs: '16px', sm: '24px', md: '32px' }} fontWeight='500'>
 					Content title goes here
 				</Typography>
@@ -57,6 +57,6 @@ export function ProductList() {
 					<ProductCardGrid products={data} />
 				</>
 			)}
-		</Box>
+		</>
 	)
 }

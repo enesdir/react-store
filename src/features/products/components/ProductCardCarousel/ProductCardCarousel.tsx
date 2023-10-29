@@ -28,30 +28,32 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 			</Box>
 		)
 	return (
-		<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }} position='relative'>
-			<Carousel
-				arrows={false}
-				autoPlay={true}
-				showDots={true}
-				swipeable
-				renderDotsOutside
-				dotListClass='custom-dot-list'
-				customDot={<CustomDot />}
-				responsive={carouselResponsive}
-			>
-				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
-					<ProductCard
-						key={id}
-						id={id}
-						name={name}
-						description={description}
-						imageUrl={imageUrl}
-						price={price}
-						shippingMethod={shippingMethod}
-					/>
-				))}
-				{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
-			</Carousel>
+		<Box display={{ xs: 'block', md: 'none' }}>
+			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} position='relative'>
+				<Carousel
+					arrows={false}
+					autoPlay={true}
+					showDots={true}
+					swipeable
+					renderDotsOutside
+					dotListClass='custom-dot-list'
+					customDot={<CustomDot />}
+					responsive={carouselResponsive}
+				>
+					{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
+						<ProductCard
+							key={id}
+							id={id}
+							name={name}
+							description={description}
+							imageUrl={imageUrl}
+							price={price}
+							shippingMethod={shippingMethod}
+						/>
+					))}
+				</Carousel>
+			</Box>
+			{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
 		</Box>
 	)
 }

@@ -23,10 +23,10 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 			</Box>
 		)
 	return (
-		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'inline-grid' }}>
-			<Grid container spacing='1rem' direction='row' alignItems='stretch'>
+		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'flex' }}>
+			<Grid container spacing='1rem' direction='row' alignItems='stretch' columns={4} width='100%'>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
-					<Grid key={id} item xs={12} md={3}>
+					<Grid key={id} item xs={1}>
 						<ProductCard
 							id={id}
 							name={name}
@@ -37,8 +37,12 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 						/>
 					</Grid>
 				))}
+				{itemsToShow < products.length && (
+					<Grid item xs={4}>
+						<LoadMoreButton onClick={loadMoreItems} />
+					</Grid>
+				)}
 			</Grid>
-			{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
 		</Box>
 	)
 }

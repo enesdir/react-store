@@ -7,7 +7,7 @@ const Home = () => {
 	return (
 		<>
 			<HeroCarousel />
-			<Container sx={{ paddingY: 10 }}>
+			<Container sx={{ paddingY: 10, minHeight: 480 }}>
 				<ProductsSection />
 			</Container>
 			{/* <ProductCardGrid products={testData} /> */}
