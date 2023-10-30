@@ -1,8 +1,8 @@
 import Container from '@mui/material/Container'
 
 import { Meta } from '@/components/Meta'
-import { HeroCarousel } from '@/features/heroSection/components/HeroCarousel/HeroCarousel'
-import { ProductsSection } from '@/features/products/components/ProductsSection'
+import { HeroCarousel } from '@/features/heroSection/'
+import { ProductsSection } from '@/features/products/'
 
 const Home = () => {
 	return (

@@ -1,53 +1,11 @@
 import type { ProductType } from '@/features/product/types/ProductType'
 
-import { Card, CardActions, CardContent, CardMedia, Link, styled, Typography } from '@mui/material'
+import { CardActions, CardContent, CardMedia, Link, Typography } from '@mui/material'
 
 import { formatToTry } from '@/features/product/utils/formatToTRY'
 import { CardLike } from './CardLike'
-
-const StyledCard = styled(Card)(({ theme }) => ({
-	'&.MuiCard-root': {
-		overflow: 'hidden',
-		border: '1px solid #E6E6E6',
-		borderRadius: '0.25rem',
-		padding: '0.625rem',
-		display: 'flex',
-		minHeight: '370px',
-		flexDirection: 'column',
-		position: 'relative',
-		gap: '0.25rem',
-		'&:hover .MuiCardMedia-root': {
-			transform: 'scale3d(1.05, 1.02, 1)',
-		},
-	},
-	'& .MuiCardMedia-root': {
-		transition: 'transform 300ms ease-in-out',
-		height: '208px',
-		[theme.breakpoints.up('md')]: {
-			height: '111px',
-		},
-		[theme.breakpoints.up('lg')]: {
-			height: '179px',
-		},
-	},
-	'& .MuiCardContent-root': {
-		padding: 0,
-		display: 'flex',
-		flexDirection: 'column',
-		gap: '0.25rem',
-		':last-child': {
-			paddingBottom: 0,
-		},
-	},
-}))
-const TruncatedTypography = styled(Typography)(() => ({
-	display: '-webkit-box',
-	overflow: 'hidden',
-	WebkitBoxOrient: 'vertical',
-	WebkitLineClamp: 2,
-	margin: '0.25rem 0.5rem',
-	textOverflow: 'ellipsis',
-}))
+import { StyledCard } from './StyledCard'
+import { TruncatedTypography } from './TruncatedTypography'
 
 export const ProductCard = ({ id, name, price, imageUrl, description, shippingMethod }: ProductType) => {
 	const MAX_DESCRIPTION_LENGTH = 65

@@ -1,14 +1,13 @@
-import type { ProductType } from '@/features/product/types/ProductType'
+import type { ProductType } from '@/features/product/'
 
 import { useState } from 'react'
-import { Box, Grid } from '@mui/material'
+import Box from '@mui/material/Box'
 
-import { ProductCard } from '@/features/product/components/ProductCard'
+import { ProductCard } from '@/features/product/'
 import { LoadMoreButton } from './LoadMoreButton'
 
 type ProductGridProps = {
 	products: ProductType[]
-	// isShowLiked: boolean
 }
 
 export const ProductCardGrid = ({ products }: ProductGridProps) => {
@@ -24,9 +23,9 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 		)
 	return (
 		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'flex' }}>
-			<Grid container spacing='1rem' direction='row' alignItems='stretch' columns={4} width='100%'>
+			<Box display='grid' gridTemplateColumns='repeat(16, 1fr)' gap={2} width='100%' justifyContent='space-between'>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
-					<Grid key={id} item xs={1}>
+					<Box key={id} gridColumn='span 4'>
 						<ProductCard
 							id={id}
 							name={name}
@@ -35,14 +34,14 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 							price={price}
 							shippingMethod={shippingMethod}
 						/>
-					</Grid>
+					</Box>
 				))}
 				{itemsToShow < products.length && (
-					<Grid item xs={4}>
+					<Box gridColumn='span 16'>
 						<LoadMoreButton onClick={loadMoreItems} />
-					</Grid>
+					</Box>
 				)}
-			</Grid>
+			</Box>
 		</Box>
 	)
 }

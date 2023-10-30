@@ -8,7 +8,7 @@ import { appErrorMessages } from '@/app/config/generalSettings'
 import { FullSizeCenteredFlexBox } from '@/components/styled'
 import resetApp from '@/utils/resetApp'
 
-function AppErrorBoundaryFallback() {
+export function AppErrorBoundaryFallback() {
 	return (
 		<Box height={400}>
 			<FullSizeCenteredFlexBox>
@@ -24,5 +24,3 @@ function AppErrorBoundaryFallback() {
 		</Box>
 	)
 }
-
-export default AppErrorBoundaryFallback

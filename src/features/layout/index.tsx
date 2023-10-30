@@ -1,18 +1,3 @@
-import type { ReactNode } from 'react'
-
-import { Footer } from './footer/Footer'
-import { Header } from './Header'
-
-type LayoutProps = {
-	children: ReactNode
-}
-
-export const Layout = ({ children }: LayoutProps) => {
-	return (
-		<>
-			<Header />
-			<main>{children}</main>
-			<Footer />
-		</>
-	)
-}
+export { Layout } from './components/Layout'
+export type { FooterElementType } from './types/FooterElementsType'
+export type { SecondaryHeaderItemsType } from './types/SecondaryHeaderItemsType'

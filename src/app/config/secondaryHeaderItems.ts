@@ -1,4 +1,4 @@
-import { SecondaryHeaderItemsType } from '@/features/layout/types/SecondaryHeaderItemsType'
+import { SecondaryHeaderItemsType } from '@/features/layout/'
 
 export const secondaryHeaderItems: SecondaryHeaderItemsType[] = [
 	{

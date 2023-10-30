@@ -1,11 +1,11 @@
-import type { ProductType } from '@/features/product/types/ProductType'
+import type { ProductType } from '@/features/product/'
 
 import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Carousel from 'react-multi-carousel'
 
 import { carouselResponsive } from '@/app/config/carouselResponsive'
-import { ProductCard } from '@/features/product/components/ProductCard'
+import { ProductCard } from '@/features/product/'
 import { LoadMoreButton } from '@/features/products/components/LoadMoreButton'
 import { CustomDot } from './CustomDot'
 

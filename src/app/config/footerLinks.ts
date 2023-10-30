@@ -1,4 +1,4 @@
-import type { FooterElementType } from '@/features/layout/types/FooterElementsType'
+import type { FooterElementType } from '@/features/layout/'
 
 export const footerElements: FooterElementType[] = [
 	{

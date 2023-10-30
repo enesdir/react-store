@@ -1,5 +1,5 @@
-import { styled } from '@mui/material'
 import Box from '@mui/material/Box'
+import { styled } from '@mui/material/styles'
 import Carousel from 'react-multi-carousel'
 
 import { carouselResponsive } from '@/app/config/carouselResponsive'
