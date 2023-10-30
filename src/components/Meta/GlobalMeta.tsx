@@ -1,25 +1,19 @@
 import { Helmet } from 'react-helmet-async'
 
-const APP_NAME = 'vite-react-tailwind-starter'
+import { APP_NAME } from '@/app/config/generalSettings'
 
-const Meta = () => {
+export const GlobalMeta = () => {
 	return (
 		<Helmet>
-			<title>Vite React Tailwind Starter</title>
+			<meta charSet='UTF-8' />
 			<meta name='description' content='Vite React Tailwind Starter Template' />
-
 			<meta name='application-name' content={APP_NAME} />
 			<meta name='apple-mobile-web-app-capable' content='yes' />
 			<meta name='apple-mobile-web-app-status-bar-style' content='default' />
 			<meta name='apple-mobile-web-app-title' content={APP_NAME} />
 			<meta name='format-detection' content='telephone=no' />
 			<meta name='mobile-web-app-capable' content='yes' />
-			<meta name='theme-color' content='#FFFFFF' />
-
-			<link rel='shortcut icon' href='/assets/favicon.svg' />
-			<link rel='manifest' href='/manifest.json' />
+			<meta name='theme-color' content='#0059BC' />
 		</Helmet>
 	)
 }
-
-export default Meta

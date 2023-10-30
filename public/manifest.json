@@ -4,7 +4,7 @@
 	"lang": "en",
 	"start_url": "/",
 	"background_color": "#FFFFFF",
-	"theme_color": "#FFFFFF",
+	"theme_color": "#0059BC",
 	"dir": "ltr",
 	"display": "standalone",
 	"orientation": "portrait",
