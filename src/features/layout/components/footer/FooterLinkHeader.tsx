@@ -1,13 +1,11 @@
-import Typography from '@mui/material/Typography'
+import type { CustomLinkType } from '@/features/layout'
 
-export interface FooterHeaderProps {
-	headerText: string
-}
+import Link from '@mui/material/Link'
 
-export function FooterLinkHeader({ headerText }: FooterHeaderProps) {
+export function FooterLinkHeader({ title, url }: CustomLinkType) {
 	return (
-		<Typography variant='CTA1' sx={{ mb: 0.5 }} fontSize={{ base: 'lg', md: 'xl' }} color='common.white'>
-			{headerText}
-		</Typography>
+		<Link variant='CTA1' sx={{ mb: 0.5 }} fontSize={{ base: 'lg', md: 'xl' }} color='common.white' href={url}>
+			{title}
+		</Link>
 	)
 }

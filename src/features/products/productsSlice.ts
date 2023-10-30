@@ -46,7 +46,6 @@ const productsSlice = createSlice({
 			})
 			.addCase(fetchProducts.fulfilled, (state, action) => {
 				state.isLoading = false
-				// Add user to the state array
 				state.data = action.payload
 			})
 			.addCase(fetchProducts.rejected, (state, action) => {

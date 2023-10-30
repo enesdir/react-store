@@ -141,5 +141,5 @@ This project uses MIT license: [License](https://github.com/enesdir/react-store/
 [RTK-url]: https://redux-toolkit.js.org/
 [MUI]: https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white
 [MUI-url]: https://mui.com/
-[TS-url]: (https://www.typescriptlang.org/)
-[Live-url]: (https://react-store.enesesen.com)
+[TS-url]: https://www.typescriptlang.org/
+[Live-url]: https://react-store.enesesen.com/

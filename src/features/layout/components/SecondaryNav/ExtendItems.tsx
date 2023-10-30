@@ -6,7 +6,7 @@ import Link from '@mui/material/Link'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 
-import { secondaryHeaderItems } from '@/app/config/secondaryHeaderItems'
+import { secondaryNavItems } from '@/app/config/secondaryNavItems'
 import { SpacedFlexBox } from '@/components/styled'
 
 export function ExtendItems() {
@@ -22,7 +22,7 @@ export function ExtendItems() {
 
 	return (
 		<SpacedFlexBox display={{ sm: 'flex', md: 'none' }} sx={{ paddingBottom: 1 }}>
-			{secondaryHeaderItems.slice(0, 6).map((section, index) => (
+			{secondaryNavItems.slice(0, 6).map((section, index) => (
 				<Link
 					color='#6A6D70'
 					noWrap
@@ -83,7 +83,7 @@ export function ExtendItems() {
 					},
 				}}
 			>
-				{secondaryHeaderItems.slice(6).map((items, index) => (
+				{secondaryNavItems.slice(6).map((items, index) => (
 					<MenuItem key={index} onClick={handleClose}>
 						<Link color='inherit' noWrap variant='body2' href={items.url} sx={{ flexShrink: 0 }}>
 							{items.title}

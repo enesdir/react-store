@@ -1,25 +1,27 @@
-import type { FooterLinkType } from '@/features/layout/types/FooterElementsType'
+import type { CustomLinkType } from '@/features/layout/'
 
 import Stack from '@mui/material/Stack'
 
-import { footerElements } from '@/app/config/footerLinks'
+import { footerItems } from '@/app/config/footerItems'
 import { FooterLink } from './FooterLink'
 import { FooterLinkHeader } from './FooterLinkHeader'
 
 interface FooterLinksItemProps {
-	elements: FooterLinkType[]
+	elements: CustomLinkType[]
 }
 
 const FooterLinksItem = ({ elements }: FooterLinksItemProps) => {
-	const footerLinks = elements.map((element, index) => <FooterLink key={index} to={element.to} text={element.text} />)
+	const footerLinks = elements.map((element, index) => (
+		<FooterLink key={index} url={element.url} title={element.title} />
+	))
 	return <>{footerLinks}</>
 }
 
 export function FooterLinkContainer() {
-	const footerLinks = footerElements.map((footerElement, index) => (
+	const footerLinks = footerItems.map((footerElement, index) => (
 		<div key={index}>
-			<FooterLinkHeader headerText={footerElement.headerText} />
-			<FooterLinksItem elements={footerElement.elements} />
+			<FooterLinkHeader title={footerElement.title} url={footerElement.url} />
+			<FooterLinksItem elements={footerElement.items} />
 		</div>
 	))
 

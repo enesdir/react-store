@@ -1,11 +1,11 @@
-import type { FooterLinkType } from '@/features/layout/types/FooterElementsType'
+import type { CustomLinkType } from '@/features/layout'
 
 import Link from '@mui/material/Link'
 
-export function FooterLink({ text, to }: FooterLinkType) {
+export function FooterLink({ title, url }: CustomLinkType) {
 	return (
-		<Link href={to} my={2} fontSize='20px' display={{ xs: 'none', md: 'block' }} variant='CTA2' color='common.white'>
-			{text}
+		<Link href={url} my={2} fontSize='20px' display={{ xs: 'none', md: 'block' }} variant='CTA2' color='common.white'>
+			{title}
 		</Link>
 	)
 }

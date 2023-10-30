@@ -1,3 +1,4 @@
 export { Layout } from './components/Layout'
-export type { FooterElementType } from './types/FooterElementsType'
-export type { SecondaryHeaderItemsType } from './types/SecondaryHeaderItemsType'
+export type { CustomLinkType } from './types/CustomLinkType'
+export type { FooterItemType } from './types/FooterItemType'
+export type { SecondaryNavItemType } from './types/SecondaryNavItemType'

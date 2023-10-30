@@ -2,11 +2,11 @@
 import React, { useState } from 'react'
 import { ButtonBase, Popper } from '@mui/material/'
 
-import { secondaryHeaderItems } from '@/app/config/secondaryHeaderItems'
+import { secondaryNavItems } from '@/app/config/secondaryNavItems'
 import { SpacedFlexBox } from '@/components/styled'
-import { SecondaryNavContainer } from './SecondaryNavContainer'
+import { NavTabContent } from './NavTabContent'
 
-export const SecondaryHeaderTabs = () => {
+export const SecondaryNavTabs = () => {
 	const [value, setValue] = useState<number>(0)
 	const [open, setOpen] = useState<boolean>(false)
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -28,7 +28,7 @@ export const SecondaryHeaderTabs = () => {
 
 	return (
 		<SpacedFlexBox onMouseLeave={handleMenuClose} display={{ sm: 'none', md: 'flex' }}>
-			{secondaryHeaderItems.map((section, index) => (
+			{secondaryNavItems.map((section, index) => (
 				<ButtonBase
 					key={index}
 					onMouseEnter={(event) => handleMenuOpen(index, event)}
@@ -58,7 +58,7 @@ export const SecondaryHeaderTabs = () => {
 			))}
 
 			<Popper open={open} anchorEl={anchorEl} id='menu-list-grow' placement='bottom-start'>
-				<SecondaryNavContainer onClick={handleMenuClose} itemsValue={value} />
+				<NavTabContent onClick={handleMenuClose} itemsValue={value} />
 			</Popper>
 		</SpacedFlexBox>
 	)
