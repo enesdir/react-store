@@ -5,9 +5,18 @@ This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#sc
 - ⚡ blazing fast dev server and build
 - 🔗 route management added (`react-router-dom` configured)
 
-[**Live Demo**][Live-url]
+⚡⚡⚡[**_Live Demo_**][Live-url] ⚡⚡⚡
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/enesdir/react-store) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/enesdir/react-store) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/enesdir/react-store)
+<p align="center">
+  <a href="https://vercel.com/import/git?s=https://github.com/enesdir/react-store">
+    <img alt="Deploy with Vercel" src="https://vercel.com/button" />
+  </a>
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/enesdir/react-store">
+  <img alt="Deploy to Netlify" src="https://www.netlify.com/img/deploy/button.svg"/></a>
+  <a href="https://stackblitz.com/github/enesdir/react-store">
+    <img alt="Open in StackBlitz" src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"/>
+  </a>
+</p>
 
 <p align="center">
   <a href="https://github.com/enesdir/react-store/blob/master/LICENSE.md">
