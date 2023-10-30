@@ -1,6 +1,6 @@
 # React-Store
 
-This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [Material UI][MUI-url] and [TypeScript][TS-url] setup. You can see: [**_Live Demo_**][Live-url]
+This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [Material UI][MUI-url] and [TypeScript][TS-url] setup. You can see: [Live Demo][Live-url]
 
 - ⚡ blazing fast dev server and build
 - 🔗 route management added (`react-router-dom` configured)

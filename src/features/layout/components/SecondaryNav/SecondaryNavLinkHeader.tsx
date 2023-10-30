@@ -6,7 +6,7 @@ export interface FooterHeaderProps {
 
 export function SecondaryNavLinkHeader({ title }: FooterHeaderProps) {
 	return (
-		<Typography fontWeight='bold' variant='body2' sx={{ mb: 0.5 }} fontSize={{ base: 'lg', md: 'xl' }}>
+		<Typography fontWeight='bold' variant='body2' sx={{ mb: 0.5 }} fontSize={{ xs: '20px', md: '24px' }}>
 			{title}
 		</Typography>
 	)
