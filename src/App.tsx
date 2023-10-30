@@ -2,6 +2,8 @@ import { CssBaseline } from '@mui/material'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import { GlobalMeta } from '@/components/Meta'
+import { withErrorHandler } from '@/features/errorHandling'
+import AppErrorBoundaryFallback from '@/features/errorHandling/fallbacks/App'
 import { Layout } from '@/features/layout'
 import { Routings } from '@/router/Routings'
 
@@ -15,4 +17,4 @@ const App = () => (
 	</Router>
 )
 
-export default App
+export default withErrorHandler(App, AppErrorBoundaryFallback)

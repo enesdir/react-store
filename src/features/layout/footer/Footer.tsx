@@ -20,7 +20,7 @@ export function Footer() {
 						alignItems='flex-start'
 						spacing={20}
 					>
-						<Box sx={{ width: { xs: '80%', sm: '60%' } }}>
+						<Box sx={{ width: { xs: '80%', sm: '50%', md: '35%' } }}>
 							<Logo isBottom />
 							<Typography variant='subtitle1' color='common.white' sx={{ display: { xs: 'none', sm: 'block' } }}>
 								Lorem ipsum dolor sit amet consectetur. Auctor tempor pretium aliquam neque.
