@@ -9,7 +9,7 @@ import { useBoolean } from '@/hooks/useBoolean'
 import { ProductCardCarousel } from './ProductCardCarousel/ProductCardCarousel'
 import { ProductCardGrid } from './ProductCardGrid'
 
-export function ProductList() {
+function ProductList() {
 	const { data, likedProducts } = useAppSelector((state) => state.products)
 	const { value: isShowLiked, toggle: toggleShowLiked } = useBoolean(false)
 	const filteredItem = data.filter((product) => likedProducts.includes(product.id))
@@ -60,3 +60,5 @@ export function ProductList() {
 		</>
 	)
 }
+
+export default ProductList

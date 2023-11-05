@@ -6,6 +6,12 @@ This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#sc
 - 🔗 route management added (`react-router-dom` configured)
 
 <p align="center">
+  <a href="https://github.com/enesdir/react-store">
+    <img alt="Live Demo" src="https://i.ibb.co/bLzrhYP/react-store.webp" />
+  </a>
+</p>
+
+<p align="center">
   <a href="https://vercel.com/import/git?s=https://github.com/enesdir/react-store">
     <img alt="Deploy with Vercel" src="https://vercel.com/button" />
   </a>
@@ -100,7 +106,7 @@ Install dependencies.
 npm install
 ```
 
-Serve with hot reload at <http://localhost:5173>.
+Serve with hot reload at <http://localhost:3000>.
 
 ```bash
 npm run dev # start development server

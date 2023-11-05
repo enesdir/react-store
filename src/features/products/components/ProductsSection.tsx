@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 
 import { useAppDispatch, useAppSelector } from '@/app/store'
+import asyncComponentLoader from '@/utils/loader'
 import { fetchProducts } from '../productsSlice'
 import { CardSkeleton } from './CardSkeleton'
-import { ProductList } from './ProductList'
 
+const ProductList = asyncComponentLoader(() => import('./ProductList'))
 export function ProductsSection() {
 	const dispatch = useAppDispatch()
 	const { data, isLoading, error } = useAppSelector((state) => state.products)

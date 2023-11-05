@@ -1,9 +1,10 @@
 import Container from '@mui/material/Container'
 
 import { Meta } from '@/components/Meta'
-import { HeroCarousel } from '@/features/heroSection/'
 import { ProductsSection } from '@/features/products/'
+import asyncComponentLoader from '@/utils/loader'
 
+const HeroCarousel = asyncComponentLoader(() => import('@/features/heroSection/'))
 const Home = () => {
 	return (
 		<>

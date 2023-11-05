@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import * as path from 'path'
+import { resolve } from 'path'
 
 import react from '@vitejs/plugin-react-swc'
 import million from 'million/compiler'
@@ -9,11 +9,13 @@ import { defineConfig } from 'vite'
 export default defineConfig({
 	plugins: [million.vite({ auto: true }), react()],
 	server: {
-		open: true,
+		open: false,
+		strictPort: true,
+		port: 3000, // you can replace this port with any port
 	},
 	resolve: {
 		alias: {
-			'@': path.resolve(__dirname, './src'),
+			'@': resolve(__dirname, './src'),
 		},
 	},
 })
