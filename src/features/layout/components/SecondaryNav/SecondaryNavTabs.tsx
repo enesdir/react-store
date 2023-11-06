@@ -1,10 +1,13 @@
-// thanks: https://stackoverflow.com/questions/54745744/material-uireact-hovering-on-tabs-will-not-open-and-close-properly
-import React, { useState } from 'react'
+import type { MouseEvent } from 'react'
+
+import { useState } from 'react'
 import { ButtonBase, Popper } from '@mui/material/'
 
 import { secondaryNavItems } from '@/app/config/secondaryNavItems'
 import { SpacedFlexBox } from '@/components/styled'
 import { NavTabContent } from './NavTabContent'
+
+// thanks: https://stackoverflow.com/questions/54745744/material-uireact-hovering-on-tabs-will-not-open-and-close-properly
 
 export const SecondaryNavTabs = () => {
 	const [value, setValue] = useState<number>(0)
@@ -15,7 +18,7 @@ export const SecondaryNavTabs = () => {
 	// Your logic here
 	// }
 
-	const handleMenuOpen = (index: number, event: React.MouseEvent<HTMLElement>) => {
+	const handleMenuOpen = (index: number, event: MouseEvent<HTMLElement>) => {
 		setAnchorEl(event.currentTarget)
 		setValue(index)
 		setOpen(true)

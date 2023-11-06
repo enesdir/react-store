@@ -1,6 +1,7 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
 	env: {
+		node: true,
 		browser: true, // This is the application's env (not ESList's env)
 		es2020: true,
 	},
@@ -20,12 +21,11 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'latest',
-		sourceType: 'module',
-		project: './tsconfig.json',
+		ecmaFeatures: {
+			jsx: true,
+		},
 	},
-	plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
+	plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
 	ignorePatterns: ['/.cache', '/.git', '/.husky', '/.yarn', '/*/dist'],
-	rules: {
-		'react-refresh/only-export-components': 'off',
-	},
+	rules: {},
 }

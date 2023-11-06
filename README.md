@@ -1,15 +1,11 @@
 # React-Store
 
+[![react-firebase-vite](https://i.ibb.co/bLzrhYP/react-store.webp)](https://github.com/enesdir/react-store)
+
 This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [Material UI][MUI-url] and [TypeScript][TS-url] setup. You can see: [Live Demo][Live-url]
 
 - ⚡ blazing fast dev server and build
 - 🔗 route management added (`react-router-dom` configured)
-
-<p align="center">
-  <a href="https://github.com/enesdir/react-store">
-    <img alt="Live Demo" src="https://i.ibb.co/bLzrhYP/react-store.webp" />
-  </a>
-</p>
 
 <p align="center">
   <a href="https://vercel.com/import/git?s=https://github.com/enesdir/react-store">

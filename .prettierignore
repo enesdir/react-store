@@ -6,3 +6,10 @@ node_modules
 LICENSE
 build
 dist
+
+
+package-lock.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+.DS_Store
