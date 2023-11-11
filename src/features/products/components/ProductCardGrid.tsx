@@ -16,13 +16,9 @@ export const ProductCardGrid = ({ products }: ProductGridProps) => {
 		setItemsToShow((prevItems) => prevItems + 4)
 	}
 	if (!products || !products.length)
-		return (
-			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'none', md: 'block' }}>
-				There are no products to display.
-			</Box>
-		)
+		return <Box sx={{ paddingTop: 2, paddingBottom: 5 }}>There are no products to display.</Box>
 	return (
-		<Box justifyItems='center' gap={2} display={{ xs: 'none', md: 'flex' }}>
+		<Box justifyItems='center' gap={2}>
 			<Box display='grid' gridTemplateColumns='repeat(16, 1fr)' gap={2} width='100%' justifyContent='space-between'>
 				{products.slice(0, itemsToShow).map(({ id, description, name, imageUrl, price, shippingMethod }) => (
 					<Box key={id} gridColumn='span 4'>

@@ -22,13 +22,9 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 		setItemsToShow((prevItems) => prevItems + 4)
 	}
 	if (!products || !products.length)
-		return (
-			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} display={{ xs: 'block', md: 'none' }}>
-				There are no products to display.
-			</Box>
-		)
+		return <Box sx={{ paddingTop: 2, paddingBottom: 5 }}>There are no products to display.</Box>
 	return (
-		<Box display={{ xs: 'block', md: 'none' }}>
+		<>
 			<Box sx={{ paddingTop: 2, paddingBottom: 5 }} position='relative'>
 				<Carousel
 					arrows={false}
@@ -54,6 +50,6 @@ export const ProductCardCarousel = ({ products }: ProductGridProps) => {
 				</Carousel>
 			</Box>
 			{itemsToShow < products.length && <LoadMoreButton onClick={loadMoreItems} />}
-		</Box>
+		</>
 	)
 }
