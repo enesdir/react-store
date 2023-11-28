@@ -1,11 +1,11 @@
-import type { ProductType } from '@/features/product/types/ProductType'
-
 import { CardActions, CardContent, CardMedia, Link, Typography } from '@mui/material'
 
 import { formatToTry } from '@/features/product/utils/formatToTRY'
 import { CardLike } from './CardLike'
 import { StyledCard } from './StyledCard'
 import { TruncatedTypography } from './TruncatedTypography'
+
+import type { ProductType } from '@/features/product/types/ProductType'
 
 export const ProductCard = ({ id, name, price, imageUrl, description, shippingMethod }: ProductType) => {
 	const MAX_DESCRIPTION_LENGTH = 65

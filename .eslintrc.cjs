@@ -1,5 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
+	root: true,
 	env: {
 		node: true,
 		browser: true, // This is the application's env (not ESList's env)

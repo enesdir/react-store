@@ -1,6 +1,3 @@
-import type { ProductSearchFilters } from '@/features/productSearch/types/SearchWithFiltersType'
-import type { SelectChangeEvent } from '@mui/material/Select'
-
 import { useEffect, useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import { FormControl, OutlinedInput } from '@mui/material'
@@ -13,6 +10,9 @@ import Select from '@mui/material/Select'
 import TextField from '@mui/material/TextField'
 
 import { titleCase } from '@/features/productSearch/utils/titleCase'
+
+import type { ProductSearchFilters } from '@/features/productSearch/types/SearchWithFiltersType'
+import type { SelectChangeEvent } from '@mui/material/Select'
 
 type SearchProps = {
 	filters: ProductSearchFilters[]

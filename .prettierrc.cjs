@@ -32,25 +32,22 @@ module.exports = {
 		'prettier-plugin-jsdoc',
 	],
 	importOrder: [
+		'<BUILTIN_MODULES>', // Node.js built-in modules
+		'^(react/(.*)$)|^(react$)', // React and Next
+		'<THIRD_PARTY_MODULES>', // Anything not matched in other groups.
+		'',
+
+		'^(@/(.*)$)', // Things that start with `@` or digit or underscore.
+		'^[.]', // relative imports
+		'',
+		// types
 		'<TYPES>',
 		'<TYPES>^[.]',
 		'^@/types/(.*)$',
 		'^@/features/(.*)/types/(.*)$',
-		'',
-		// React and Next
-		'^(react/(.*)$)|^(react$)',
-		'^(next/(.*)$)|^(next$)',
-		// Anything not matched in other groups.
-		'<THIRD_PARTY_MODULES>',
-		'',
-		// Things that start with `@` or digit or underscore.
-		'^(@/|\\d|~/)',
-		// Anything that starts with a dot, or multiple dots, and doesn't have the "other files" extensions.
-		'^(?=\\.+)(.(?!\\.(graphql|css|png|svg|jpe?g|webp|avif|wasm|mp4|webm)))+$',
-		// Other files with extensions.
-		'^.+\\.(graphql|css|png|svg|jpe?g|webp|avif|wasm|mp4|webm)$',
 	],
 	importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
+	importOrderTypeScriptVersion: '5.0.0',
 
 	overrides: [
 		{

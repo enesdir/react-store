@@ -1,11 +1,11 @@
-import type { FormEvent } from 'react'
-
 import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import FormHelperText from '@mui/material/FormHelperText'
 import InputBase from '@mui/material/InputBase'
 import { styled } from '@mui/material/styles'
+
+import type { FormEvent } from 'react'
 
 const Form = styled('form')({ display: 'flex' })
 

@@ -1,10 +1,10 @@
-import type { ProductType } from '@/features/product/'
-
 import { useState } from 'react'
 import Box from '@mui/material/Box'
 
 import { ProductCard } from '@/features/product/'
 import { LoadMoreButton } from './LoadMoreButton'
+
+import type { ProductType } from '@/features/product/'
 
 type ProductGridProps = {
 	products: ProductType[]

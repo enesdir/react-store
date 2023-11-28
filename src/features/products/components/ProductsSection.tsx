@@ -13,6 +13,7 @@ export function ProductsSection() {
 	const { data, isLoading, error, likedProducts } = useAppSelector((state) => state.products)
 	const { value: isShowLiked, toggle: toggleShowLiked } = useBoolean(false)
 	const filteredItem = data.filter((product) => likedProducts.includes(product.id))
+
 	useEffect(() => {
 		dispatch(fetchProducts())
 	}, [dispatch])

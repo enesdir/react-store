@@ -1,10 +1,10 @@
-import type { MouseEventHandler } from 'react'
-
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 
 import { secondaryNavItems } from '@/app/config/secondaryNavItems'
 import { NavTabLinkContainer } from './NavTabLinkContainer'
+
+import type { MouseEventHandler } from 'react'
 
 type NavTabContentProps = {
 	onClick?: MouseEventHandler<HTMLElement>

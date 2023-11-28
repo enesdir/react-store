@@ -1,6 +1,6 @@
-import type { CustomLinkType } from '@/features/layout/'
-
 import Link from '@mui/material/Link'
+
+import type { CustomLinkType } from '@/features/layout/'
 
 export function NavTabHeaderLink({ title, url }: CustomLinkType) {
 	return (

@@ -1,7 +1,7 @@
-import type { MouseEventHandler } from 'react'
-
 import MenuIcon from '@mui/icons-material/Menu'
 import IconButton from '@mui/material/IconButton'
+
+import type { MouseEventHandler } from 'react'
 
 type HamburgerMenu = {
 	handleClick: MouseEventHandler<HTMLButtonElement>

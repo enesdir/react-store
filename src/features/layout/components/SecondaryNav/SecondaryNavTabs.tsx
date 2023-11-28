@@ -1,11 +1,11 @@
-import type { MouseEvent } from 'react'
-
 import { useState } from 'react'
 import { ButtonBase, Popper } from '@mui/material/'
 
 import { secondaryNavItems } from '@/app/config/secondaryNavItems'
 import { SpacedFlexBox } from '@/components/styled'
 import { NavTabContent } from './NavTabContent'
+
+import type { MouseEvent } from 'react'
 
 // thanks: https://stackoverflow.com/questions/54745744/material-uireact-hovering-on-tabs-will-not-open-and-close-properly
 

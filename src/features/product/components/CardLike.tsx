@@ -1,11 +1,11 @@
-import type { ProductType } from '@/features/product/types/ProductType'
-
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
 import IconButton from '@mui/material/IconButton'
 
 import { useAppDispatch, useAppSelector } from '@/app/store'
 import { toggleLiked } from '@/features/products/productsSlice'
+
+import type { ProductType } from '@/features/product/types/ProductType'
 
 type CardLikeProps = {
 	id: ProductType['id']

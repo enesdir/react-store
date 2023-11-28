@@ -1,10 +1,10 @@
-import type { CustomLinkType } from '@/features/layout/'
-
 import Stack from '@mui/material/Stack'
 
 import { footerItems } from '@/app/config/footerItems'
 import { FooterLink } from './FooterLink'
 import { FooterLinkHeader } from './FooterLinkHeader'
+
+import type { CustomLinkType } from '@/features/layout/'
 
 interface FooterLinksItemProps {
 	elements: CustomLinkType[]

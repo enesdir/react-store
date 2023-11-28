@@ -1,8 +1,8 @@
-import type { AnyProps, LoadComponent, LoaderDefaultOptions } from './types'
-
 import { loaderConfig as loaderDefaultOptions } from '@/app/config/loaderConfig'
 import { Loading } from '@/components/Loading'
 import asyncComponentLoader from './loader'
+
+import type { AnyProps, LoadComponent, LoaderDefaultOptions } from './types'
 
 const configuredAsyncComponentLoader = (
 	loadComponent: LoadComponent,

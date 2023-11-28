@@ -1,10 +1,10 @@
-import type { ProductType } from '@/features/product/'
-import type { Theme } from '@mui/material'
-
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 import { ProductCardCarousel } from './ProductCardCarousel/ProductCardCarousel'
 import { ProductCardGrid } from './ProductCardGrid'
+
+import type { ProductType } from '@/features/product/'
+import type { Theme } from '@mui/material'
 
 type ProductListProps = {
 	products: ProductType[]

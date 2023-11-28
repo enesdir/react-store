@@ -13,7 +13,7 @@ function getRandomColor() {
 	return [`rgb(${r}, ${g}, ${b})`, `rgb(${255 - r}, ${255 - g}, ${255 - b})`]
 }
 
-function welcome() {
+export function welcome() {
 	const [color, invertedColor] = getRandomColor()
 
 	const styles = [
@@ -27,5 +27,3 @@ function welcome() {
 
 	console.log(`%c=== ${APP_NAME} ===`, styles)
 }
-
-export default welcome

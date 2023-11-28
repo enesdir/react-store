@@ -1,5 +1,3 @@
-import type { SelectChangeEvent } from '@mui/material/Select'
-
 import { useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import Box from '@mui/material/Box'
@@ -11,6 +9,8 @@ import MenuItem from '@mui/material/MenuItem'
 import OutlinedInput from '@mui/material/OutlinedInput'
 import Select from '@mui/material/Select'
 import TextField from '@mui/material/TextField'
+
+import type { SelectChangeEvent } from '@mui/material/Select'
 
 export function SearchBar() {
 	const [department, setDepartment] = useState<string>('')

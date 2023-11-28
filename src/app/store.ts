@@ -1,11 +1,11 @@
-import type { PreloadedState } from '@reduxjs/toolkit'
-
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 import { productsReducer } from '@/features/products/productsSlice'
 import productSearchSlice from '@/features/productSearch/productSearchSlice'
 import userReducer from '@/features/user/userSlice'
+
+import type { PreloadedState } from '@reduxjs/toolkit'
 
 const rootReducer = combineReducers({
 	products: productsReducer,

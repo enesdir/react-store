@@ -1,8 +1,8 @@
-import type { MetaProps } from './types'
-
 import { Helmet } from 'react-helmet-async'
 
 import { APP_NAME, defaultMetaTags } from '@/app/config/generalSettings'
+
+import type { MetaProps } from './types'
 
 export function Meta({
 	description = defaultMetaTags.description,
