@@ -10,6 +10,7 @@ module.exports = {
 	rules: {
 		'type-empty': [2, 'never'],
 		'type-case': [2, 'always', 'lower-case'],
+		'scope-case': [2, 'always', 'lower-case'],
 		'subject-empty': [2, 'never'],
 		'body-empty': [2, 'always'],
 		'footer-empty': [2, 'always'],

@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/enesdir/react-store">
-    <img alt="App Image" src="https://i.ibb.co/bLzrhYP/react-store.webp" />
+    <img alt="App Image" src="https://i.ibb.co/Cbknqtj/react-storelossly.gif" />
   </a>
 </p>
 
@@ -89,14 +89,14 @@ This template setup will include following features.
 
 ### Dependencies
 
-| Package                                      | Description                                                                                      |
-| -------------------------------------------- | :----------------------------------------------------------------------------------------------- |
-| [React][React-url]                           | A platform and framework for building single-page client applications using HTML and TypeScript. |
-| [Redux Toolkit][Rtk-url]                     | Provides a means to inline SVG files to allow for them to be easily styled by CSS and code.      |
-| [Material UI][MUI-url]                       | Modern & Interactive Open-source Charts                                                          |
-| [Redux][Redux-url]                           | Angular wrapper for ApexCharts to build interactive visualizations in Angular.                   |
-| [react-router][react-router-url]             | Declarative routing for React                                                                    |
-| [react-helmet-async][react-helmet-async-url] | Thread-safe Helmet for React 16+ and friends                                                     |
+| Package                                      | Description                                                                                                                   |
+| -------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| [React][React-url]                           | The library for web and native user interfaces                                                                                |
+| [Redux Toolkit][Rtk-url]                     | The official, opinionated, batteries-included toolset for efficient Redux development                                         |
+| [Material UI][MUI-url]                       | Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design. |
+| [Redux][Redux-url]                           | Predictable state container for JavaScript apps                                                                               |
+| [react-router][react-router-url]             | Declarative routing for React                                                                                                 |
+| [react-helmet-async][react-helmet-async-url] | Thread-safe Helmet for React 16+ and friends                                                                                  |
 
 ### Dev Dependencies
 
@@ -119,6 +119,7 @@ This template setup will include following features.
 ### Prerequisites
 
 - node >=18.4.0
+- npm >=9.x.x
 
 ### Install
 
