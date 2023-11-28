@@ -12,7 +12,6 @@
 		"build": "npm run type-check && vite build",
 		"build:turbo": "npx turbo build",
 		"check:turbo": "npx turbo lint type-check",
-		"commit": "git-cz",
 		"dev": "vite",
 		"format": "prettier --write .",
 		"lint": "eslint src",
@@ -25,7 +24,7 @@
 	},
 	"config": {
 		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
+			"path": "@commitlint/cz-commitlint"
 		}
 	},
 	"dependencies": {
@@ -46,6 +45,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
+		"@commitlint/cz-commitlint": "^18.4.3",
 		"@commitlint/prompt-cli": "^18.4.3",
 		"@ianvs/prettier-plugin-sort-imports": "^4.1.1",
 		"@types/node": "^20.10.0",
@@ -57,13 +57,13 @@
 		"autoprefixer": "^10.4.16",
 		"commitizen": "^4.3.0",
 		"commitlint": "^18.4.3",
-		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.54.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.1",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"husky": "^8.0.3",
+		"inquirer": "^8.2.6",
 		"lint-staged": "^15.1.0",
 		"prettier": "^3.1.0",
 		"prettier-plugin-jsdoc": "^1.1.1",
