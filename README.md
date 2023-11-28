@@ -1,11 +1,12 @@
 # React-Store
 
-[![react-firebase-vite](https://i.ibb.co/bLzrhYP/react-store.webp)](https://github.com/enesdir/react-store)
+<p align="center">
+  <a href="https://github.com/enesdir/react-store">
+    <img alt="App Image" src="https://i.ibb.co/bLzrhYP/react-store.webp" />
+  </a>
+</p>
 
 This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [Material UI][MUI-url] and [TypeScript][TS-url] setup. You can see: [Live Demo][Live-url]
-
-- ⚡ blazing fast dev server and build
-- 🔗 route management added (`react-router-dom` configured)
 
 <p align="center">
   <a href="https://vercel.com/import/git?s=https://github.com/enesdir/react-store">
@@ -48,33 +49,70 @@ This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#sc
 <summary>Table of Contents</summary>
 
 - [React-Store](#react-store)
+  - [Features](#features)
+  - [RoadMap](#roadmap)
   - [Built With](#built-with)
+    - [Dependencies](#dependencies)
+    - [Dev Dependencies](#dev-dependencies)
   - [Installation \& Usage](#installation--usage)
     - [Prerequisites](#prerequisites)
     - [Install](#install)
-    - [Lint scripts](#lint-scripts)
-    - [Typecheck](#typecheck)
-    - [Build](#build)
+    - [Commands](#commands)
+  - [Project Folder Structure](#project-folder-structure)
   - [License](#license)
 
 </details>
 
-## Built With
+## Features
 
 This template setup will include following features.
 
+- 🔥 Landing layout
+- 🌇 Carousel Image Slider
+- ⭐️ Reponsive Design
+- 🪳Mocks Pagination
+- ⚡ Blazing fast dev server and build
+- 🔗 Route management added (`react-router-dom` configured)
+- 🧙‍♂️ Developer experience improved with ESLint, Prettier and Husky
+- 📈 Absolute Import and Path Alias — Import components using `@/` and `~/` prefix
+- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
+- ▲ Netlify and Vercel deployment configurations
+
+## RoadMap
+
+- [ ] Product Detail Page
+- [ ] Add to Cart
+
+## Built With
+
 [![Vite][Vite]][Vite-url] [![React][React.js]][React-url] [![Redux Toolkit][RTK]][Rtk-url] [![MUI][MUI]][MUI-url]
 
-| ✅  | Feature                                                                                                                                                                           |
-| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅  | [Generate Vite][Vite-url] + [React][React-url] + [Typescript][TS-url]                                                                                                             |
-| ✅  | [Husky](https://typicode.github.io/husky/)                                                                                                                                        |
-| ✅  | [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) + [Commitlint](https://commitlint.js.org/#/) + [Commitizen](https://commitizen-tools.github.io/commitizen/) |
-| ✅  | [ESLint](https://eslint.org/)                                                                                                                                                     |
-| ✅  | [Prettier format](https://prettier.io/)                                                                                                                                           |
-| ✅  | [Lint Staged](https://github.com/okonet/lint-staged#readme)                                                                                                                       |
-| ✅  | [Material UI](https://mui.com/)                                                                                                                                                   |
-| ✅  | [Redux](https://redux.js.org/) + [Redux Toolkit][Rtk-url]                                                                                                                         |
+### Dependencies
+
+| Package                                      | Description                                                                                      |
+| -------------------------------------------- | :----------------------------------------------------------------------------------------------- |
+| [React][React-url]                           | A platform and framework for building single-page client applications using HTML and TypeScript. |
+| [Redux Toolkit][Rtk-url]                     | Provides a means to inline SVG files to allow for them to be easily styled by CSS and code.      |
+| [Material UI][MUI-url]                       | Modern & Interactive Open-source Charts                                                          |
+| [Redux][Redux-url]                           | Angular wrapper for ApexCharts to build interactive visualizations in Angular.                   |
+| [react-router][react-router-url]             | Declarative routing for React                                                                    |
+| [react-helmet-async][react-helmet-async-url] | Thread-safe Helmet for React 16+ and friends                                                     |
+
+### Dev Dependencies
+
+| Package                                        | Description                                                                                                                 |
+| ---------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [Vite][Vite-url]                               | Next generation frontend tooling. It's fast!                                                                                |
+| [Typescript][TS-url]                           | TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.                                             |
+| [Husky][Husky-url]                             | Git hook management                                                                                                         |
+| [Conventional Commit][Conventional-Commit-url] | A specification for adding human and machine readable meaning to commit messages.                                           |
+| [Commitlint][Commitlint-url]                   | Lint commit messages                                                                                                        |
+| [Commitizen][Commitizen-url]                   | Using a standardized set of rules to write commits, makes commits easier to read, and enforces writing descriptive commits. |
+| [Lint Staged][Lint-Staged-url]                 | Run linters against staged git files and don't let 💩 slip into your code base!                                             |
+| [ESLint][ESLint-url]                           | A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.                                       |
+| [Prettier][Prettier-url]                       | An opinionated code formatter                                                                                               |
+| [million][million-url]                         | The Virtual DOM Replacement for React. Gain big performance wins for UI and data heavy React apps.                          |
+| [vite-plugin-pwa][vite-pwa-url]                | Zero-config PWA Framework-agnostic Plugin for Vite                                                                          |
 
 ## Installation & Usage
 
@@ -108,25 +146,40 @@ Serve with hot reload at <http://localhost:3000>.
 npm run dev # start development server
 ```
 
-### Lint scripts
+### Commands
 
-```bash
-npm run lint        # check code
-npm run lint:fix    # fix code & formatting
-npm run lint-staged # does npm run lint only for staged files
-```
+| Command                   | Description                                     |
+| ------------------------- | :---------------------------------------------- |
+| `npm run dev`             | Starts the server in dev mode                   |
+| `npm run lint`            | Runs ESLint on the project                      |
+| `npm run lint:fix`        | Runs Prettier on entire src folder              |
+| `npm run prettier:verify` | Runs Prettier-check and throws error if fails   |
+| `npm run lint-staged`     | Runs Prettier on only staged (changed) files    |
+| `npm run type-check`      | Runs TSC                                        |
+| `npm run build`           | Runs build production bundle to 'dist' directly |
+| `npm run preview`         | Runs start production server                    |
 
-### Typecheck
+## Project Folder Structure
 
-```bash
-npm run type-check
-```
+The following is the structured layout of the project directory, providing an overview of the organization of files and folders.
 
-### Build
-
-```bash
-npm run build   # build production bundle to 'dist' directly
-npm run preview # start production server
+```plaintext
+- root
+  - public/                     # Contains static assets and files served to the client
+    - assets/                   # Holds publicly accessible assets such as images, fonts, etc.
+  - src/                        # Contains the source code for the application
+    - app/                      # Global application files including constants, CSS, and configurations
+      - config/                 # Houses configuration files and settings for the application
+    - components/               # Reusable UI components used across the application
+      - {ComponentName}/        # Houses reusable React components shared between features
+    - features/                 # Contains functional modules or sections of the application
+      - {featureName}/          # Houses a specific feature module with its components, actions, and views
+        - types/                # Houses TypeScript type definitions and interfaces specific to this feature
+    - hooks/                    # Custom React hooks used across the application
+    - pages/                    # Contains the application pages
+    - router/                   # Houses the application's router configuration
+    - themes/                   # Contains MUI design system files
+    - utils/                    # Utility functions and helper modules
 ```
 
 ## License
@@ -145,3 +198,15 @@ This project uses MIT license: [License](https://github.com/enesdir/react-store/
 [MUI-url]: https://mui.com/
 [TS-url]: https://www.typescriptlang.org/
 [Live-url]: https://react-store.enesesen.com/
+[Husky-url]: https://typicode.github.io/husky/
+[Conventional-Commit-url]: https://www.conventionalcommits.org/
+[Commitlint-url]: https://commitlint.js.org/#/
+[ESLint-url]: https://eslint.org/
+[Prettier-url]: https://prettier.io/
+[Redux-url]: https://redux.js.org/
+[Commitizen-url]: https://commitizen-tools.github.io/commitizen/
+[Lint-Staged-url]: https://github.com/okonet/lint-staged#readme
+[million-url]: https://github.com/aidenybai/million
+[vite-pwa-url]: https://github.com/vite-pwa/vite-plugin-pwa
+[react-router-url]: https://github.com/remix-run/react-router
+[react-helmet-async-url]: https://github.com/staylor/react-helmet-async
