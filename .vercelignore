@@ -1,0 +1,45 @@
+# <!-- markdownlint-disable-file -->
+# Local build files
+**/node_modules
+**/.DS_Store
+
+# ESLint cache files
+.eslintcache
+
+# vercel
+**/.vercel
+.turbo
+
+# Vitest
+**/vitest.config.ts
+test/
+**/*.test.tsx
+**/*.test.ts
+
+# Storybook: the production environment doesn't need it
+**/.storybook/
+**/stories.tsx
+**/*.stories.tsx
+
+# other
+.github
+.vscode
+docker-compose.yml
+README.md
+LICENSE.md
+.markdownlint.json
+.lintstagedrc.cjs
+.commitlintrc.cjs
+**/.prettier*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+.env.example
+.env.production.example
+
+# TypeScript incremental compilation cache
+*.tsbuildinfo
