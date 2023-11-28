@@ -25,7 +25,7 @@ export const ProductCard = ({ id, name, price, imageUrl, description, shippingMe
 				handleExternalLinkClick('https://google.com')
 			}}
 		>
-			<CardMedia component='img' image={imageUrl} alt={name} />
+			<CardMedia component='img' image={imageUrl} alt={name} loading='lazy' />
 			<CardActions
 				sx={{
 					position: 'absolute',

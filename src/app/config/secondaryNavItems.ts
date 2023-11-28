@@ -34,7 +34,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -69,7 +69,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -104,7 +104,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -139,7 +139,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -174,7 +174,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -209,7 +209,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -244,7 +244,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -279,7 +279,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -314,7 +314,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -349,7 +349,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -384,7 +384,7 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 	{
 		title: 'Menu Item',
@@ -419,6 +419,6 @@ export const secondaryNavItems: SecondaryNavItemType[] = [
 				],
 			},
 		],
-		menuImage: '/assets/secondNav/Rectangle29.png',
+		menuImage: '/assets/secondNav/Rectangle29.webp',
 	},
 ]

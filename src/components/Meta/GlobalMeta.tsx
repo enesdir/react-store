@@ -6,7 +6,7 @@ export const GlobalMeta = () => {
 	return (
 		<Helmet>
 			<meta charSet='UTF-8' />
-			<meta name='description' content='Vite React Tailwind Starter Template' />
+			<meta name='description' content='Vite React MUI E-Commerce Application' />
 			<meta name='application-name' content={APP_NAME} />
 			<meta name='apple-mobile-web-app-capable' content='yes' />
 			<meta name='apple-mobile-web-app-status-bar-style' content='default' />

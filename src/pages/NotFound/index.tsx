@@ -2,6 +2,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-router-dom'
 
+import imgUrl from '~/public/assets/404_Error.svg'
 import { Meta } from '@/components/Meta'
 import { CenteredFlexBox } from '@/components/styled'
 
@@ -15,7 +16,7 @@ const NotFound = () => {
 				gap={2}
 			>
 				<Box sx={{ justifyContent: 'center' }}>
-					<img width={500} src='/assets/404 Error-rafiki.svg' alt='404' />
+					<img width={500} src={imgUrl} alt='404' loading='eager' />
 				</Box>
 
 				<Box sx={{ justifyContent: 'center', alignItems: 'flex-start', paddingBottom: 10 }}>

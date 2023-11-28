@@ -1,5 +1,5 @@
 export const APP_NAME = 'React Store'
-const email = 'auther-email@gmail.com'
+const email = 'author-email@gmail.com'
 
 export const defaultMetaTags = {
 	image: '/cover.png',

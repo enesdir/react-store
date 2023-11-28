@@ -6,6 +6,7 @@ node_modules
 LICENSE
 build
 dist
+dev-dist
 
 package-lock.json
 pnpm-lock.yaml

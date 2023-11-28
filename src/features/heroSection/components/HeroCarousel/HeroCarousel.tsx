@@ -36,6 +36,7 @@ export function HeroCarousel() {
 					margin='auto'
 					src={image.imgPath}
 					alt={image.label}
+					loading='lazy'
 				/>
 			))}
 		</StyledCarousel>

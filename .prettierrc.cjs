@@ -36,7 +36,7 @@ module.exports = {
 		'^(react/(.*)$)|^(react$)', // React and Next
 		'<THIRD_PARTY_MODULES>', // Anything not matched in other groups.
 		'',
-
+		'^(~/(.*)$)',
 		'^(@/(.*)$)', // Things that start with `@` or digit or underscore.
 		'^[.]', // relative imports
 		'',
@@ -45,6 +45,11 @@ module.exports = {
 		'<TYPES>^[.]',
 		'^@/types/(.*)$',
 		'^@/features/(.*)/types/(.*)$',
+		'',
+		// Anything that starts with a dot, or multiple dots, and doesn't have the "other files" extensions.
+		'^(?=\\.+)(.(?!\\.(graphql|css|png|svg|jpe?g|webp|avif|wasm|mp4|webm)))+$',
+		// Other files with extensions.
+		'^.+\\.(graphql|css|png|svg|jpe?g|webp|avif|wasm|mp4|webm)$',
 	],
 	importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
 	importOrderTypeScriptVersion: '5.0.0',
