@@ -5,7 +5,7 @@ import { productsReducer } from '@/features/products/productsSlice'
 import productSearchSlice from '@/features/productSearch/productSearchSlice'
 import userReducer from '@/features/user/userSlice'
 
-import type { PreloadedState } from '@reduxjs/toolkit'
+import type { ConfigureStoreOptions } from '@reduxjs/toolkit'
 
 const rootReducer = combineReducers({
 	products: productsReducer,
@@ -13,10 +13,10 @@ const rootReducer = combineReducers({
 	productSearch: productSearchSlice,
 })
 
-export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
+export const setupStore = (options?: ConfigureStoreOptions['preloadedState'] | undefined) => {
 	return configureStore({
 		reducer: rootReducer,
-		preloadedState,
+		...options,
 	})
 }
 export type RootState = ReturnType<typeof rootReducer>

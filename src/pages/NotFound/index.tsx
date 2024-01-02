@@ -2,9 +2,9 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-router-dom'
 
-import imgUrl from '~/public/assets/404_Error.svg'
 import { Meta } from '@/components/Meta'
 import { CenteredFlexBox } from '@/components/styled'
+import imgUrl from '~/public/assets/404_Error.svg'
 
 const NotFound = () => {
 	return (

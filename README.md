@@ -50,7 +50,6 @@ This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#sc
 
 - [React-Store](#react-store)
   - [Features](#features)
-  - [RoadMap](#roadmap)
   - [Built With](#built-with)
     - [Dependencies](#dependencies)
     - [Dev Dependencies](#dev-dependencies)
@@ -65,23 +64,18 @@ This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#sc
 
 ## Features
 
-This template setup will include following features.
+This project setup will include following features.
 
 - 🔥 Landing layout
 - 🌇 Carousel Image Slider
 - ⭐️ Reponsive Design
-- 🪳Mocks Pagination
+- 🪳 Mocks Pagination
 - ⚡ Blazing fast dev server and build
 - 🔗 Route management added (`react-router-dom` configured)
 - 🧙‍♂️ Developer experience improved with ESLint, Prettier and Husky
 - 📈 Absolute Import and Path Alias — Import components using `@/` and `~/` prefix
 - 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
 - ▲ Netlify and Vercel deployment configurations
-
-## RoadMap
-
-- [ ] Product Detail Page
-- [ ] Add to Cart
 
 ## Built With
 
