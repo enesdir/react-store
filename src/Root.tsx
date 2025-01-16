@@ -1,6 +1,5 @@
 import { ComponentType, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
 import { Provider } from 'react-redux'
 
 import { setupStore } from './app/store'
@@ -16,11 +15,9 @@ function render(App: ComponentType) {
 	root.render(
 		<StrictMode>
 			<Provider store={store}>
-				<HelmetProvider>
-					<AppThemeProvider>
-						<App />
-					</AppThemeProvider>
-				</HelmetProvider>
+				<AppThemeProvider>
+					<App />
+				</AppThemeProvider>
 			</Provider>
 		</StrictMode>
 	)

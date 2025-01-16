@@ -4,6 +4,8 @@ import { Box, IconButton, Stack, SxProps, Theme, Typography, TypographyVariant }
 import { useAppDispatch, useAppSelector } from '@/app/store'
 import { changeMode } from '@/features/user/userSlice'
 
+import type { JSX } from 'react'
+
 const TemplateTester = () => {
 	const dispatch = useAppDispatch()
 	const mode = useAppSelector((state) => state.user.mode)

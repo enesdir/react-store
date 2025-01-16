@@ -1,10 +1,8 @@
-import { Helmet } from 'react-helmet-async'
-
 import { APP_NAME } from '@/app/config/generalSettings'
 
 export const GlobalMeta = () => {
 	return (
-		<Helmet>
+		<>
 			<meta charSet='UTF-8' />
 			<meta name='description' content='Vite React MUI E-Commerce Application' />
 			<meta name='application-name' content={APP_NAME} />
@@ -14,6 +12,6 @@ export const GlobalMeta = () => {
 			<meta name='format-detection' content='telephone=no' />
 			<meta name='mobile-web-app-capable' content='yes' />
 			<meta name='theme-color' content='#0059BC' />
-		</Helmet>
+		</>
 	)
 }
