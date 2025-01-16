@@ -4,6 +4,7 @@
 	"type": "module",
 	"author": "enesdir",
 	"private": true,
+	"packageManager": "npm@11.0.0",
 	"engines": {
 		"node": ">=22.x",
 		"npm": ">=10.x"
