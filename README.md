@@ -83,14 +83,13 @@ This project setup will include following features.
 
 ### Dependencies
 
-| Package                                      | Description                                                                                                                   |
-| -------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| [React][React-url]                           | The library for web and native user interfaces                                                                                |
-| [Redux Toolkit][Rtk-url]                     | The official, opinionated, batteries-included toolset for efficient Redux development                                         |
-| [Material UI][MUI-url]                       | Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design. |
-| [Redux][Redux-url]                           | Predictable state container for JavaScript apps                                                                               |
-| [react-router][react-router-url]             | Declarative routing for React                                                                                                 |
-| [react-helmet-async][react-helmet-async-url] | Thread-safe Helmet for React 16+ and friends                                                                                  |
+| Package                          | Description                                                                                                                   |
+| -------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| [React][React-url]               | The library for web and native user interfaces                                                                                |
+| [Redux Toolkit][Rtk-url]         | The official, opinionated, batteries-included toolset for efficient Redux development                                         |
+| [Material UI][MUI-url]           | Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design. |
+| [Redux][Redux-url]               | Predictable state container for JavaScript apps                                                                               |
+| [react-router][react-router-url] | Declarative routing for React                                                                                                 |
 
 ### Dev Dependencies
 
@@ -105,7 +104,6 @@ This project setup will include following features.
 | [Lint Staged][Lint-Staged-url]                 | Run linters against staged git files and don't let 💩 slip into your code base!                                             |
 | [ESLint][ESLint-url]                           | A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.                                       |
 | [Prettier][Prettier-url]                       | An opinionated code formatter                                                                                               |
-| [million][million-url]                         | The Virtual DOM Replacement for React. Gain big performance wins for UI and data heavy React apps.                          |
 | [vite-plugin-pwa][vite-pwa-url]                | Zero-config PWA Framework-agnostic Plugin for Vite                                                                          |
 
 ## Installation & Usage
@@ -201,7 +199,5 @@ This project uses MIT license: [License](https://github.com/enesdir/react-store/
 [Redux-url]: https://redux.js.org/
 [Commitizen-url]: https://commitizen-tools.github.io/commitizen/
 [Lint-Staged-url]: https://github.com/okonet/lint-staged#readme
-[million-url]: https://github.com/aidenybai/million
 [vite-pwa-url]: https://github.com/vite-pwa/vite-plugin-pwa
 [react-router-url]: https://github.com/remix-run/react-router
-[react-helmet-async-url]: https://github.com/staylor/react-helmet-async
